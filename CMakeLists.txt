@@ -1,7 +1,4 @@
-﻿# CMakeList.txt : CMake project for hotels-template-library-examples, include source and define
-# project specific logic here.
-#
-cmake_minimum_required (VERSION 3.8)
+﻿cmake_minimum_required (VERSION 3.8)
 
 # Enable Hot Reload for MSVC compilers if supported.
 if (POLICY CMP0141)
@@ -11,11 +8,8 @@ endif()
 
 project ("hotels-template-library-examples")
 
-# Add source to this project's executable.
-add_executable (hotels-template-library-examples "hotels-template-library-examples.cpp" "hotels-template-library-examples.h")
+set(HOTELS_TEMPLATE_LIBRARY_INCLUDE_PATH "${CMAKE_CURRENT_LIST_DIR}/submodules/hotels-template-library")
 
-if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET hotels-template-library-examples PROPERTY CXX_STANDARD 20)
-endif()
+add_subdirectory(src)
 
 # TODO: Add tests and install targets if needed.
