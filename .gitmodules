@@ -1,0 +1,3 @@
+[submodule "submodules/hotels-template-library"]
+	path = submodules/hotels-template-library
+	url = https://github.com/google/hotels-template-library.git
